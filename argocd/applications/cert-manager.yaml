@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: cert-manager
+  namespace: argocd
+
+spec:
+  project: default
+  sources:
+    - chart: cert-manager
+      repoURL: jetstack https://charts.jetstack.io
+      targetRevision: v1.19.1
+      helm:
+        releasename: cert-manager
+        parameters:
+          - name: startupapicheck.timeout
+            value: "5m"
+            forceString: true
+          - name: installCRDs
+            value: "true"
+
+    - repoURL: git@github.com:tkjftkjf/tkjf-infra
+      path: cert-manager
+      targetRevision: HEAD
+      directory:
+        recurse: true
+
+  destination:
+    namespace: cert-manager
+    server: https://kubernetes.default.svc
+
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
