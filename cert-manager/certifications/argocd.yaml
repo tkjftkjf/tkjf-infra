@@ -11,5 +11,4 @@ spec:
     # group?
   dnsNames:
     - "argocd.gistory.me.kr"
-    - "mine.gistory.me.kr" # for test
   # commonName?
