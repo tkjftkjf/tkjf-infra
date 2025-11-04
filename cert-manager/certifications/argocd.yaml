@@ -4,9 +4,9 @@ metadata:
   name: argocd-gistory-me-kr
   namespace: cert-manager
 spec:
-  secretName: argocd-gistory-me-kr # from where
+  secretName: argocd-gistory-me-kr
   issuerRef:
-    name: letsencrypt-prod # from where. from clusterissuer? how k9s find this ref
+    name: letsencrypt-prod 
     kind: ClusterIssuer
     # group?
   dnsNames:
