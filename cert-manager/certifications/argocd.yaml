@@ -9,5 +9,6 @@ spec:
     name: letsencrypt-prod # from where. from clusterissuer? how k9s find this ref
     kind: ClusterIssuer
     # group?
-  dnsNames: "argocd.gistory.me.kr"
+  dnsNames:
+    - "argocd.gistory.me.kr"
   # commonName?
