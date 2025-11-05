@@ -11,6 +11,7 @@ spec:
     # group?
   dnsNames:
     - "argocd.gistory.me.kr"
+    - "argocd.icarus.gistory.me.kr"
   # commonName?
   secretTemplate:
     annotations:
