@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: reflector
+  namespace: argocd
+
+spec:
+  project: default
+  source:
+    chart: reflector
+    repoURL: https://emberstack.github.io/helm-charts
+    targetRevision: 9.1.38
+    helm:
+      releaseName: reflector
+      parameters:
+        - name: startupapicheck.timeout
+          value: "5m"
+          forceString: true
+        - name: installCRDs
+          value: "true"
+  destination:
+    namespace: kube-system
+    server: https://kubernetes.default.svc
+
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
