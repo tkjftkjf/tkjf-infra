@@ -8,15 +8,15 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    host: argocd.gistory.me.kr
-    http:
-      paths:
-        path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: argocd-server
-            port:
-              number: 80
+    - host: argocd.gistory.me.kr
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-server
+                port:
+                  number: 80
   tls:
-    secretName: argocd-gistory-me-kr
+    - secretName: argocd-gistory-me-kr
