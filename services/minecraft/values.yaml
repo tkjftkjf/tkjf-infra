@@ -4,7 +4,7 @@ resources:
     cpu: 500m
 
 minecraftServer:
-  eula: "True"
+  eula: "TRUE"
   type: "VANILA"
   difficulty: difficult
   version: "LATEST"
