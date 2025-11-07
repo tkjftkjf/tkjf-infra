@@ -15,7 +15,7 @@ spec:
       helm:
         releaseName: minecraft-server
         valueFiles:
-          - $value/values.yaml
+          - $value/services/minecraft/values.yaml
         parameters:
           - name: startupapicheck.timeout
             value: "5m"
