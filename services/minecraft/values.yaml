@@ -1,0 +1,13 @@
+resources:
+  requests:
+    memory: 512Mi
+    cpu: 500m
+
+minecraftServer:
+  eula: "True"
+  type: "VANILA"
+  difficulty: difficult
+  version: "LATEST"
+  whitelist: "tkjftkjf"
+  ops: "tkjftkjf"
+  servicePort: 25565

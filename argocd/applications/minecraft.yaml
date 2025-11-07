@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: minecraft-server
+  namespace: argocd
+spec:
+  destination:
+    namespace: minecraft
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - chart: minecraft
+      repoURL: https://itzg.github.io/minecraft-server-charts/
+      targetRevision: 5.0.0
+      helm:
+        releaseName: minecraft-server
+        valueFiles:
+          - $value/values.yaml
+        parameters:
+          - name: startupapicheck.timeout
+            value: "5m"
+            forceString: true
+          - name: installCRDs
+            value: "true"
+    - repoURL: https://github.com/tkjftkjf/tkjf-infra
+      path: services/minecraft
+      targetRevision: HEAD
+      ref: value
+      directory:
+        recurse: true
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

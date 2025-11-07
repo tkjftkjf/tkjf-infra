@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: mine-gistory-me-kr
+  namespace: cert-manager
+spec:
+  secretName: mine-gistory-me-kr
+  issuerRef:
+    name: letsencrypt-prod 
+    kind: ClusterIssuer
+    # group?
+  dnsNames:
+    - "mine.gistory.me.kr"
+  # commonName?
+  secretTemplate:
+    annotations:
+      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+      reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
+      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "minecraft"
