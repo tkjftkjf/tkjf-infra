@@ -6,7 +6,7 @@ resources:
 minecraftServer:
   eula: "TRUE"
   type: "VANILLA"
-  difficulty: difficult
+  difficulty: hard
   version: "LATEST"
   whitelist: "tkjftkjf"
   ops: "tkjftkjf"
