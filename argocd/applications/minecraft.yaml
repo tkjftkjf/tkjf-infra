@@ -4,6 +4,7 @@ metadata:
   name: minecraft-server
   namespace: argocd
 spec:
+  type: LoadBalancer
   destination:
     namespace: minecraft
     server: https://kubernetes.default.svc
