@@ -11,4 +11,4 @@ minecraftServer:
   whitelist: "tkjftkjf"
   ops: "tkjftkjf"
   servicePort: 25565
-  serviceType: LoadBalancer
+  serviceType: NodePort
