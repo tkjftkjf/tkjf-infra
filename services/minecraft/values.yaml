@@ -8,7 +8,7 @@ minecraftServer:
   type: "VANILLA"
   difficulty: hard
   version: "LATEST"
-  whitelist: "tkjftkjf"
+  whitelist: "tkjftkjf,kxmkl_,donghee0219"
   ops: "tkjftkjf"
   servicePort: 25565
   serviceType: NodePort
