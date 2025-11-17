@@ -1,4 +1,5 @@
-token: eyJhIjoiYThjM2NiODg5Yzk4ZmIxYmJkMmY2YmMzZDQ0ODNmZWQiLCJ0IjoiMzBlMGMyMTItMTRjZi00YWUxLWJlNDctNWQ2ODE0OWM2NjlmIiwicyI6Ik5tWTJObUV5WmpFdFlqSTVaaTAwTjJGbExXSm1aR0l0TldRM1lUQmhNbVZtWWpGbSJ9
+cloudflare:
+  token: eyJhIjoiYThjM2NiODg5Yzk4ZmIxYmJkMmY2YmMzZDQ0ODNmZWQiLCJ0IjoiMzBlMGMyMTItMTRjZi00YWUxLWJlNDctNWQ2ODE0OWM2NjlmIiwicyI6Ik5tWTJObUV5WmpFdFlqSTVaaTAwTjJGbExXSm1aR0l0TldRM1lUQmhNbVZtWWpGbSJ9
 ingress:
   - hostname: minecraft.gistory.me.kr
     service: tcp://minecraft-server.minecraft:25565
