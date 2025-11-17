@@ -1,0 +1,6 @@
+cloudflare:
+  token:
+ingress:
+  - hostname: minecraft.gistory.me.kr
+    service: tcp://minecraft-server.minecraft:25565
+  - service: http_status:404

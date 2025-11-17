@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: cloudflare-tunnel
+  namespace: argocd
+
+spec:
+  destination:
+    namespace: cloudflare-tunnel
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - repoURL: https://cloudflare.github.io/helm-charts
+      chart: cloudflared
+      targetRevision: 1.1.0
+      helm:
+        releaseName: cloudflare-tunnel
+        valueFiles:
+          - $value/services/cloudflare-tunnel/values.yaml
+        parameters:
+          - name: startupapicheck.timeout
+            value: "5m"
+            forceString: true
+          - name: installCRDs
+            value: "true"
+    - repoURL: https://github.com/tkjftkjf/tkjf-infra
+      path: services/cloudflare-tunnel
+      targetRevision: HEAD
+      ref: value
+      directory:
+        recurse: true
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
