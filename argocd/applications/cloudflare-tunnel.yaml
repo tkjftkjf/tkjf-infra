@@ -18,12 +18,6 @@ spec:
         releaseName: cloudflare-tunnel
         valueFiles:
           - $value/services/cloudflare-tunnel/values.yaml
-        parameters:
-          - name: startupapicheck.timeout
-            value: "5m"
-            forceString: true
-          - name: installCRDs
-            value: "true"
     - repoURL: https://github.com/tkjftkjf/tkjf-infra
       path: services/cloudflare-tunnel
       targetRevision: HEAD
