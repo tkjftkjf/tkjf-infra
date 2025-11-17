@@ -13,4 +13,6 @@ wireguard:
   clients:
     - friendlyName: "window-pc"
       allowedIPs: "10.34.0.2/32"
-      publicKey: "TjP7nEcANrLoH/KlWiT+zn3/KjTXk4M6gPQxXotpgSU="
+      publicKey: "eG/nTxeO0AY/ktJvGWTa8i4WW8S3R/BLOL2/2wEnqlA="
+
+replicaCount: 1
