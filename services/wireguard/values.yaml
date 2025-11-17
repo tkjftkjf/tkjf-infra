@@ -1,0 +1,13 @@
+peers:
+  - name: local-computer
+
+service:
+  type: NodePort
+  port: 51820
+  nodePort: 31820
+  protocol: UDP
+
+persistence:
+  enabled: true
+  storageClassName: "local-path"
+  size: 1Gi
