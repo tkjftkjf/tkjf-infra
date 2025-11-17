@@ -13,8 +13,8 @@ wireguard:
   serverAddress: "10.34.0.1/24"
   serverCidr: "10.34.0.0/24"
   clients:
-    - friendlyName: "window-pc"
-      allowedIPs: "10.34.0.2/32"
-      publicKey: "eG/nTxeO0AY/ktJvGWTa8i4WW8S3R/BLOL2/2wEnqlA="
+    - FriendlyName: "window-pc"
+      AllowedIPs: "10.34.0.2/32"
+      PublicKey: "mLrR2dKvbiUBLf8kb2ZsWSAirsHTBQeyhXSE3gEcMj4="
 
 replicaCount: 1
