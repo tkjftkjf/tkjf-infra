@@ -1,6 +1,3 @@
-peers:
-  - name: local-computer
-
 service:
   type: NodePort
   port: 51820
@@ -11,3 +8,9 @@ persistence:
   enabled: true
   storageClassName: "local-path"
   size: 1Gi
+
+wireguard:
+  clients:
+    - friendlyName: "window-pc"
+      allowedIPs: "10.34.0.2/32"
+      publicKey: "TjP7nEcANrLoH/KlWiT+zn3/KjTXk4M6gPQxXotpgSU="
