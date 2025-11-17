@@ -6,10 +6,12 @@ service:
 
 persistence:
   enabled: true
-  storageClassName: "local-path"
+  storageClassName: local-path
   size: 1Gi
 
 wireguard:
+  serverAddress: "10.34.0.1/24"
+  serverCidr: "10.34.0.0/24"
   clients:
     - friendlyName: "window-pc"
       allowedIPs: "10.34.0.2/32"
