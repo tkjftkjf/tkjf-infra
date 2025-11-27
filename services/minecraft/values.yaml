@@ -5,6 +5,8 @@ resources:
 
 minecraftServer:
   eula: "TRUE"
+  version: "1.21.10"
+  memory: "4G"
   type: "FABRIC"
   difficulty: hard
   version: "LATEST"
