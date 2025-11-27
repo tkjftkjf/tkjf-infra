@@ -14,6 +14,7 @@ minecraftServer:
   ops: "tkjftkjf"
   servicePort: 25565
   serviceType: NodePort
+  nodePort: 31355
 
   extraEnv:
     - ENABLE_AUTOPAUSE: "false"
