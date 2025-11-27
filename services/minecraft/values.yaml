@@ -15,6 +15,9 @@ minecraftServer:
   servicePort: 25565
   serviceType: NodePort
 
+  extraEnv:
+    - ENABLE_AUTOPAUSE: "false"
+
   modrinth:
     projects:
       - fabric-api:0.138.3+1.21.10
