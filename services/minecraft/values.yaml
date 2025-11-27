@@ -1,14 +1,23 @@
 resources:
   requests:
-    memory: 512Mi
-    cpu: 500m
+    memory: 4Gi
+    cpu: 1000m
 
 minecraftServer:
   eula: "TRUE"
-  type: "VANILLA"
+  type: "FABRIC"
   difficulty: hard
   version: "LATEST"
   whitelist: "tkjftkjf,BDRor,donghee0219"
   ops: "tkjftkjf"
   servicePort: 25565
   serviceType: NodePort
+
+  modrinth:
+    projects:
+      - fabric-api:0.138.3+1.21.10
+      - ferrite-core:8.0.2-fabric
+      - lithium:mc1.21.10-0.20.1-fabric
+      - structory:1.3.12
+      - structory-towers:1.0.14
+      - terralith:2.5.13
