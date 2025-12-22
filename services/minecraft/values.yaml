@@ -10,7 +10,7 @@ minecraftServer:
   type: "FABRIC"
   difficulty: hard
   version: "1.21.10"
-  whitelist: "tkjftkjf,BDRor,donghee0219,seolgi1215"
+  whitelist: "tkjftkjf,BDRor,donghee0219,seolgi1215,__STEVIA__"
   ops: "tkjftkjf"
   servicePort: 25565
   serviceType: NodePort
