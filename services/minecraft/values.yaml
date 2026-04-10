@@ -1,3 +1,5 @@
+replicaCount: 0 # disabled
+
 resources:
   requests:
     memory: 4Gi
