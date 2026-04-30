@@ -1,3 +1,8 @@
 environmentVariables:
   WG_HOST: vpn.gistory.me.kr
   PASSWORD_HASH: $2a$12$j4.8tP4AWY25d15IdYehv.rBs6hiBW9NIDQqusN9vcqzYguEt2SS6
+service:
+  type: NodePort
+  port: 51820
+  nodePort: 31820
+  protocol: UDP
