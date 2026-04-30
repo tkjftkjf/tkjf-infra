@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: vpn-gistory-me-kr
+  namespace: cert-manager
+spec:
+  secretName: vpn-gistory-me-kr
+  issuerRef:
+    name: letsencrypt-prod 
+    kind: ClusterIssuer
+    # group?
+  dnsNames:
+    - "vpn.gistory.me.kr"
+  # commonName?
+  secretTemplate:
+    annotations:
+      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+      reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
+      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "wg-easy"
